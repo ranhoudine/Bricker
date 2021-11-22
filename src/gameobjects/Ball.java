@@ -31,5 +31,8 @@ public class Ball extends GameObject {
         setVelocity(getVelocity().flipped(collision.getNormal()));
         collisionSound.play();
     }
+    public int getCollisionCount(){
+        return 0;
+    }
 
 }

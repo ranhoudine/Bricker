@@ -17,10 +17,11 @@ public class Paddle extends GameObject {
                   Vector2 dimensions,
                   Renderable renderable,
                   UserInputListener inputListener,
-                  Vector2 windowDimenstions, int minDistanceFromEdge) {
+                  Vector2 windowDimensions,
+                  int minDistanceFromEdge) {
         super(topLeftCorner, dimensions, renderable);
         this.inputListener = inputListener;
-        this.windownDimensions = windowDimenstions;
+        this.windownDimensions = windowDimensions;
         this.minDistanceFromEdge = minDistanceFromEdge;
     }
 

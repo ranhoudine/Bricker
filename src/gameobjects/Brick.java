@@ -21,10 +21,10 @@ public class Brick extends GameObject {
      * @param renderable    The renderable representing the object. Can be null, in which case
      */
     public Brick(Vector2 topLeftCorner, Vector2 dimensions, Renderable renderable, CollisionStrategy collisionStrategy,
-                 Counter brickCounter) {
+                 Counter counter) {
         super(topLeftCorner, dimensions, renderable);
         this.collisionStrategy = collisionStrategy;
-        this.brickCounter = brickCounter;
+        this.brickCounter = counter;
     }
 
     @Override
