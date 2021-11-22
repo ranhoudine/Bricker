@@ -1,11 +1,11 @@
-Ran Houdine	
+ranho
 313261133
 
 א. רשימת המחלקות:
 
-- BrickerGameManager  שיורשת מ-GameManager  של DanoGameLab.
+- src.BrickerGameManager  שיורשת מ-GameManager  של DanoGameLab.
 
-החבילה bricker.gameobjects, שמכילה:
+החבילה bricker.src.gameobjects, שמכילה:
 - המחלקה Ball, שיורשת מGameObject של DanoGameLab  ומייצגת עצם משחק שהוא הכדור במשחק. 
 דורסת את השיטה onCollisionEnter לצורך התאמת ההתנהגות הספציפית שנדרשת מהכדור בעת התנגשות עם עצמים אחרים במשחק. 
 
@@ -19,7 +19,7 @@ Ran Houdine
 מהוות אובייקטי משחק ללא נראות על המסך בפועל. מנהלות הצגה של מספר הפסילות שנותרו לשחקן.
 דורסות את השיטה update  לצורך מעקב פנימי אחר הפסילות.
 
-החבילה bricker.brick_strategies, שמכילה:
+החבילה bricker.src.brick_strategies, שמכילה:
 - המחלקה CollisionStrategy, שמאפשרת להגדיר התנהגות ספציפית של אובייקט משחק בעת התנגשות. 
 במשחק הנוכחי מאפשרת מעקב אחרי מספר הלבנים שנותרו והסרת לבנה בעת התנגשות.
 

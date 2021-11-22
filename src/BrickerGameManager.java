@@ -1,10 +1,11 @@
-import brick_strategies.CollisionStrategy;
-import gameobjects.*;
-import gameobjects.Ball;
-import gameobjects.Brick;
-import gameobjects.GraphicLifeCounter;
-import gameobjects.NumericLifeCounter;
-import gameobjects.Paddle;
+package src;
+
+import src.brick_strategies.CollisionStrategy;
+import src.gameobjects.Ball;
+import src.gameobjects.Brick;
+import src.gameobjects.GraphicLifeCounter;
+import src.gameobjects.NumericLifeCounter;
+import src.gameobjects.Paddle;
 import danogl.GameManager;
 import danogl.GameObject;
 import danogl.collisions.Layer;
@@ -44,7 +45,7 @@ public class BrickerGameManager extends GameManager {
     private Counter livesCounter;
     //endregion
     //region public attributes
-    public static final float BORDER_WIDTH = 5;
+    public static final int BORDER_WIDTH = 5;
     //endregion
 
     public BrickerGameManager(String windowTitle, Vector2 windowDimensions) {
@@ -74,6 +75,10 @@ public class BrickerGameManager extends GameManager {
         super.update(deltaTime);
         checkBallFell();
         checkGameOver();
+    }
+
+    public void repositionBall(GameObject ball){
+
     }
 
     private void checkBallFell() {
