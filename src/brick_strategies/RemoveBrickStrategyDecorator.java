@@ -11,7 +11,7 @@ abstract class RemoveBrickStrategyDecorator implements CollisionStrategy{
         this.toBeDecorated = toBeDecorated;
     }
     public void onCollision(GameObject thisObj, GameObject otherObj, Counter counter) {
-
+        toBeDecorated.onCollision(thisObj, otherObj, counter);
     }
 
     @Override

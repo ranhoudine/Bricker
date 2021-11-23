@@ -29,7 +29,6 @@ public class Paddle extends GameObject {
     public void update(float deltaTime) {
         super.update(deltaTime);
         movePaddle();
-
     }
 
     private void movePaddle() {

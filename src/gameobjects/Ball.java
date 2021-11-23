@@ -9,9 +9,8 @@ import danogl.util.Vector2;
 import java.util.Random;
 
 public class Ball extends GameObject {
-    private Random random;
     private Sound collisionSound;
-
+    private int collisionCount;
     /**
      * Construct a new GameObject instance.
      *
@@ -23,16 +22,20 @@ public class Ball extends GameObject {
     public Ball(Vector2 topLeftCorner, Vector2 dimensions, Renderable renderable, Sound collisionSound) {
         super(topLeftCorner, dimensions, renderable);
         this.collisionSound = collisionSound;
+        collisionCount = 0;
     }
 
     @Override
     public void onCollisionEnter(GameObject other, Collision collision) {
-        super.onCollisionEnter(other, collision);
-        setVelocity(getVelocity().flipped(collision.getNormal()));
-        collisionSound.play();
+        if (!(other instanceof Ball)){
+            collisionCount++;
+            super.onCollisionEnter(other, collision);
+            setVelocity(getVelocity().flipped(collision.getNormal()));
+            collisionSound.play();
+        }
     }
     public int getCollisionCount(){
-        return 0;
+        return collisionCount;
     }
 
 }
